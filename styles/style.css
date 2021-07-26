@@ -1,0 +1,89 @@
+/* -------------------------- */
+/* COMMON CSS */
+/* -------------------------- */
+:root {
+  --shadow: 5px 5px 5px rgba(104, 104, 104, 0.8);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Haettenschweiler, "tahoma", sans-serif;
+}
+
+body {
+  background: url("../images/logo.jpg") no-repeat fixed center;
+  background-size: cover;
+}
+
+
+/* ---------------------------------- */
+/* PRODUCT INFORMATION SECTION */
+/* ---------------------------------- */
+section.product-info {
+  background: #475b65c2;
+}
+div.card-hover {
+  transition: all 300ms;
+  box-shadow: var(--shadow);
+}
+.card-hover:hover {
+  cursor: pointer;
+}
+.card-hover img {
+/*   clip-path: circle(20% at 5% 5%); */
+clip-path: circle(110% at 0% 0%);
+/*   transition: clip-path 300ms; */
+}
+.card-hover:hover img {
+  clip-path: circle(110% at 0% 0%);
+}
+a.btn{
+  position: relative;
+  padding: .5rem 1.5rem;
+  font-weight: 900;
+  font-size: 1rem;
+  outline: 0;
+  margin-left: 10px;
+  z-index: 1;
+    /* overflow: hidden; */
+}
+a.btn.own-blue-border{
+  border:  1px solid #0af;
+  /*border-color: #0af;*/
+}
+a.slide::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: #0af;
+  transition: right 200ms;
+  z-index: -1;
+}
+a.slide:hover::before{
+  right: 0%;
+}
+
+
+/* ---------------------------------- */
+/* INTRODUCTION SECTION */
+/* ---------------------------------- */
+section.intro{
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  background: #475b65c2;
+  height: 100vh;
+}
+section.intro figure img{
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* ---------------------------------- */
+/* OTHER PRODUCTS SECTION */
+/* ---------------------------------- */
